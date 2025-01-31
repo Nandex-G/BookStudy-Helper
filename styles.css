@@ -1,8 +1,8 @@
 body {
     margin: 0;
     height: 100vh;
-    font-family: sans-serif;
-    background-color: #3C3C3C;
+    font-family: 'Libre Baskerville';
+    background-color: #2A2A2A ;
 
     z-index: 1;
     position: relative;
@@ -81,7 +81,6 @@ header div {
 }
 .headerLinksItems li {
     margin: .8rem 0;
-    font-family: 'Merriweather';
     font-weight: 600;
     color: #F4EDE4;
     cursor: pointer;
@@ -103,4 +102,64 @@ header div {
     transform: rotateZ(90deg);
 }
 
+/* Main */
 
+main {
+    display: flex;
+    align-items: center;
+    height: 80%;
+}
+
+/* Books Section */
+
+.books_cambridge {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem;
+}
+
+.books_cambridge-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2A9D8F ;
+}
+
+.books_cambridge-books {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.books_cambridge-books span {
+    color:#8AB17D  ;
+    background-color: #4A4A4A;
+    height: 410px;
+    width: 90px;
+    margin: 0 1rem;
+    border-radius: .5rem;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: scale .5s ,width .5s;
+}
+.books_cambridge-books span:hover {
+    scale: 1.2;
+    width: 200px;
+}
+
+.books_cambridge-books span div {
+    background-color: white;
+    border-radius: inherit;
+    width: 100%;
+    height: 20%;
+}
