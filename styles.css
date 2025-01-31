@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: #3C3C3C;
+
+    z-index: 1;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #264653;
+    /* padding: 2rem 2rem; */
+    padding: 0 2rem;
+    height: 111px;
+
+    box-shadow: 0 0 8px black;
+    user-select: none;
+    position: relative;
+}
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    font-size: 2.2rem;
+    color: #E9C46A;
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+    margin-right: 3rem;
+}
+
+/* Header Links */
+
+.headerLinks {
+    flex-grow: .05;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+.headerLinks .headerTitles {
+    cursor: pointer;
+    display: flex;
+    color:  #F4A261;
+    font-size: 1.5rem;
+    width: 150px;
+}
+.headerLinks svg {
+    margin-left: .5rem;
+}
+.headerLinks svg , .headerLinks .headerTitles {
+    transition: .3s ease-in-out;
+}
+
+/* Reading And Listening */
+
+#headerListening , #headerReading {
+    position: relative;
+    height: 100%;
+}
+.headerLinksItems {
+    position: absolute;
+    top: -100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#2D5546 ;
+    width: 120%;
+    padding: 1rem .5rem;
+    border-radius: 0 0 1rem 1rem;
+    transition: .4s ease-in-out;
+    z-index: -1;
+    list-style: none;
+    margin: 0 ;
+    box-shadow: 0 0 4px #1c3129;
+}
+.headerLinksItems li {
+    margin: .8rem 0;
+    font-family: 'Merriweather';
+    font-weight: 600;
+    color: #F4EDE4;
+    cursor: pointer;
+    transition: .2s;
+}
+.headerLinksItems li:hover {
+    color: #b7afa5;
+}
+
+#headerListening:hover .headerListeningItems , #headerReading:hover .headerReadingItems , .headerListeningItems:hover , .headerReadingItems:hover {
+    top: 100%;
+}
+
+#headerListening:hover .headerTitles , #headerReading:hover .headerTitles {
+    color:  #d4711f;
+}
+#headerListening:hover .headerTitles svg , #headerReading:hover .headerTitles svg {
+    /* fill: #5f6368; */
+    transform: rotateZ(90deg);
+}
+
+
