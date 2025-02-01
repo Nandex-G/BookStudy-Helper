@@ -136,7 +136,7 @@ main {
 .books_cambridge-books span {
     color:#8AB17D  ;
     background-color: #4A4A4A;
-    height: 410px;
+    height: 368px;
     width: 90px;
     margin: 0 1rem;
     border-radius: .5rem;
@@ -145,20 +145,49 @@ main {
     font-weight: 700;
     font-size: 1.5rem;
     cursor: pointer;
-
     display: flex;
+    justify-content: center;
     flex-direction: column;
-
     transition: scale .5s ,width .5s;
+    padding: 3rem 0;
 }
 .books_cambridge-books span:hover {
     scale: 1.2;
     width: 200px;
 }
 
-.books_cambridge-books span div {
-    background-color: white;
+.books_cambridge-books p {
+    margin-top: 11.1875rem;
+    transition: .5s;
+}
+.books_cambridge-books span:hover p {
+    margin-top: 1.5rem ;
+}
+
+
+.camT{
+    margin-top: 3rem  !important;
+}
+
+.books_cambridge-books span button {
+    background-color: #3A5A40 ;
+    color: #ffffff ;
+    font-size: 1.2rem;
+    font-weight: bold;
     border-radius: inherit;
-    width: 100%;
-    height: 20%;
+    height: 15%;
+    margin: 0 1rem;
+    margin-top: 1rem;
+    opacity: 0;
+    transition: .4s;
+    border: none;
+    box-shadow: 0 0 5px #283f2c ;
+    visibility: hidden;
+}
+.books_cambridge-books span button:hover {
+    background-color: #263b2a ;
+}
+.books_cambridge-books span:hover button {
+    opacity: 1;
+    visibility: visible;
 }
