@@ -35,7 +35,7 @@ header div {
 /* Header Links */
 
 .headerLinks {
-    flex-grow: .05;
+    flex-grow: .11;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -57,7 +57,7 @@ header div {
 
 /* Reading And Listening */
 
-#headerListening , #headerReading {
+.headerLinks > div{
     position: relative;
     height: 100%;
 }
@@ -84,21 +84,21 @@ header div {
     color: #F4EDE4;
     cursor: pointer;
     transition: .2s;
+    text-align: center;
 }
 .headerLinksItems li:hover {
     color: #b7afa5;
 }
 
-#headerListening:hover .headerListeningItems , #headerReading:hover .headerReadingItems , .headerListeningItems:hover , .headerReadingItems:hover {
+#headerListening:hover .headerListeningItems , #headerReading:hover .headerReadingItems  , #headerWords:hover .headerWordsItems , .headerListeningItems:hover , .headerReadingItems:hover {
     max-height: 500px;
     padding: 1rem .5rem;
 }
 
-#headerListening:hover .headerTitles , #headerReading:hover .headerTitles {
+.headerLinks > div:hover .headerTitles {
     color:  #d4711f;
 }
 #headerListening:hover .headerTitles svg , #headerReading:hover .headerTitles svg {
-    /* fill: #5f6368; */
     transform: rotateZ(90deg);
 }
 
@@ -116,7 +116,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 3rem;
+    padding: 0 4.5rem;
 }
 
 .books_cambridge-title {
@@ -132,7 +132,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 .books_cambridge-books span {
     color:#8AB17D  ;
