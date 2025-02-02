@@ -5,25 +5,27 @@ body {
     background-color: #2A2A2A ;
 }
 
+/* Header */
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #264653;
-    /* padding: 2rem 2rem; */
     padding: 0 2rem;
     height: 111px;
-
     box-shadow: 0 0 8px black;
     user-select: none;
     position: relative;
     z-index: 100;
 }
+
 header div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .title {
     font-size: 2.2rem;
     color: #E9C46A;
@@ -41,6 +43,7 @@ header div {
     justify-content: space-between;
     margin-right: 2rem;
 }
+
 .headerLinks .headerTitles {
     cursor: pointer;
     display: flex;
@@ -48,19 +51,22 @@ header div {
     font-size: 1.5rem;
     width: 150px;
 }
+
 .headerLinks svg {
     margin-left: .5rem;
 }
+
 .headerLinks svg , .headerLinks .headerTitles {
     transition: .3s ease-in-out;
 }
 
-/* Reading And Listening */
+/* Header Links */
 
 .headerLinks > div{
     position: relative;
     height: 100%;
 }
+
 .headerLinksItems {
     position: absolute;
     display: flex;
@@ -78,14 +84,16 @@ header div {
     overflow: hidden;
     padding: 0 .5rem;
 }
+
 .headerLinksItems li {
     margin: .8rem 0;
     font-weight: 600;
     color: #F4EDE4;
     cursor: pointer;
-    transition: .2s;
+    transition: .3s;
     text-align: center;
 }
+
 .headerLinksItems li:hover {
     color: #b7afa5;
 }
@@ -98,7 +106,8 @@ header div {
 .headerLinks > div:hover .headerTitles {
     color:  #d4711f;
 }
-#headerListening:hover .headerTitles svg , #headerReading:hover .headerTitles svg {
+
+.headerLinks > div:hover .headerTitles svg{
     transform: rotateZ(90deg);
 }
 
@@ -108,6 +117,8 @@ main {
     display: flex;
     align-items: center;
     height: 80%;
+    user-select: none;
+    padding: 1rem 0;
 }
 
 /* Books Section */
@@ -116,25 +127,25 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 4.5rem;
+    padding: 0 3rem;
 }
 
 .books_cambridge-title {
-    margin-bottom: 1.5rem;
     font-size: 1.8rem;
     font-weight: bold;
     color: #2A9D8F ;
 }
 
 .books_cambridge-books {
-    margin-top: 2rem;
+    margin: 1rem 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
+
 .books_cambridge-books span {
-    color:#8AB17D  ;
+    color:#8AB17D;
     background-color: #4A4A4A;
     height: 368px;
     width: 90px;
@@ -150,20 +161,18 @@ main {
     flex-direction: column;
     transition: scale .5s ,width .5s;
     padding: 3rem 0;
+    box-shadow: 0 0 5px #000000;
 }
+
 .books_cambridge-books span:hover {
-    scale: 1.2;
-    width: 200px;
+    scale: 1.11;
+    width: 100px;
 }
 
 .books_cambridge-books p {
     margin-top: 11.1875rem;
     transition: .5s;
 }
-.books_cambridge-books span:hover p {
-    margin-top: 1.5rem ;
-}
-
 
 .camT{
     margin-top: 3rem  !important;
@@ -178,16 +187,30 @@ main {
     height: 15%;
     margin: 0 1rem;
     margin-top: 1rem;
-    opacity: 0;
-    transition: .4s;
+    transition: .3s;
     border: none;
     box-shadow: 0 0 5px #283f2c ;
+    opacity: 0;
     visibility: hidden;
 }
+
 .books_cambridge-books span button:hover {
     background-color: #263b2a ;
 }
-.books_cambridge-books span:hover button {
-    opacity: 1;
-    visibility: visible;
+
+/* Activation Classes For Books */
+
+.bookActiveButtons {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.bookActiveP {
+    margin-top: 1.5rem !important;
+    transition: margin-top 0.5s !important;
+}
+
+.bookActiveWidth {
+    width: 200px !important;
+    scale: 1.11 !important;
 }
