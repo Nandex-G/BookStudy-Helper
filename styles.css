@@ -75,7 +75,7 @@ header div {
     background-color:#2D5546 ;
     width: 120%;
     border-radius: 0 0 1rem 1rem;
-    transition: .4s ease-in-out ;
+    transition: .55s ease-in-out ;
     list-style: none;
     margin: 0 ;
     box-shadow: 0 0 4px #1c3129;
@@ -83,14 +83,14 @@ header div {
     max-height: 0;
     overflow: hidden;
     padding: 0 .5rem;
+    z-index: 50;
 }
 
 .headerLinksItems li {
     margin: .8rem 0;
     font-weight: 600;
-    color: #F4EDE4;
+    color: #eeece8;
     cursor: pointer;
-    transition: .3s;
     text-align: center;
 }
 
@@ -111,6 +111,129 @@ header div {
     transform: rotateZ(90deg);
 }
 
+/* Header Book Section */
+
+.headerBooks {
+    position: absolute;
+    background-color: #356859;
+    width: 80%;
+    padding: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 3px 5px #152921;
+    color: #eeece8;
+    transition: .4s ease-in-out ;
+
+    overflow: hidden;
+    height: 0;
+}
+
+.headerBooks ul {
+    display: flex;
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0;
+    overflow-x: auto;
+    padding: 1.15rem 0;
+    scroll-behavior: smooth;
+    margin: 0 .5rem;
+}
+
+.headerBooks ul::-webkit-scrollbar {
+    height: 10px;
+    background-color: inherit;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.headerBooks ul::-webkit-scrollbar-thumb {
+    cursor: all-scroll;
+    background-color: #2a534d;
+    border-radius: 5rem;
+    border: 2px solid #224238;
+}
+
+.headerBooks ul li {
+    transition: .2s;
+    padding: 1rem 2rem;
+    margin: 0 10px;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-wrap: nowrap;
+    background-color:#224135;
+    box-shadow: 0 5px 0 #000000 ;
+}
+
+.headerBooks ul li:hover {
+    background-color:#224135;
+}
+
+.headerBooks ul li:active {
+    box-shadow: 0 1px 0 #000000 ;
+    transform: translateY(5px);
+}
+
+.headerBooks_closeBTN {
+    background-color: #2e594c;
+    width: 50%;
+    border-radius: 0 0 1rem 1rem;
+    border: none;
+    position: absolute;
+    top: 100%;
+    transition: .25s ease-in-out ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* padding: 2px; */
+
+    overflow: hidden ;
+    height: 0 ;
+    padding: 0 ;
+}
+
+.headerBooks_closeBTN:hover {
+    background-color: #2a5145;
+}
+
+.headerBooks_closeBTN svg {
+    fill: white !important;
+}
+
+.headerBooks_closeBTN-active {
+    max-height: 1rem !important;
+    padding: 1rem;
+}
+
+.prev,.next {
+    position: absolute;
+    height: 100%;
+    border: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 0 0 1rem ;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 0 1rem 0 ;
+}
+
+/* Chose Your Book */
+
+.chooseYourBook {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    color: #8AB17D ;
+}
+
 /* Main */
 
 main {
@@ -118,7 +241,7 @@ main {
     align-items: center;
     height: 80%;
     user-select: none;
-    padding: 1rem 0;
+    padding: -1rem 0;
 }
 
 /* Books Section */

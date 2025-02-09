@@ -21,7 +21,7 @@
 </head>
 <body>  
     <header>
-        <div class="title"> BookStudy HELPER </div>
+        <div class="title"> BookStudy Helper </div>
         <div class="headerLinks">
             <div id="headerListening">
                 <div class="headerTitles">
@@ -29,9 +29,9 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
                 </div>
                 <ul class="headerLinksItems headerListeningItems">
-                    <li>Tests</li>
-                    <li>Transcripts</li>
-                    <li>Words And Phrases</li>
+                    <li onclick="HeaderBookSection()">Tests</li>
+                    <li onclick="HeaderBookSection()">Transcripts</li>
+                    <li onclick="HeaderBookSection()">Words And Phrases</li>
                 </ul>
             </div>
             <div id="headerReading">
@@ -40,8 +40,8 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
                 </div>
                 <ul class="headerLinksItems headerReadingItems">
-                    <li>Tests</li>
-                    <li>Words And Phrases</li>
+                    <li onclick="HeaderBookSection()">Tests</li>
+                    <li onclick="HeaderBookSection()">Words And Phrases</li>
                 </ul>
             </div>
             <div id="headerWords">
@@ -50,79 +50,106 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
                 </div>
                 <ul class="headerLinksItems headerWordsItems">
-                    <li>504</li>
-                    <li>Essential Words For The TOEFL</li>
+                    <li onclick="HeaderBookSection()">504</li>
+                    <li onclick="HeaderBookSection()">Essential Words For The TOEFL</li>
                 </ul>
             </div>
         </div>
+        <div class="headerBooks">
+            <ul class="headerBook_selection">
+                <li id="cambridge">Cambridge 1</li>
+                <li id="cambridge">Cambridge 2</li>
+                <li id="cambridge">Cambridge 3</li>
+                <li id="cambridge">Cambridge 4</li>
+                <li id="cambridge">Cambridge 5</li>
+                <li id="cambridge">Cambridge 6</li>
+                <li id="cambridge">Cambridge 7</li>
+                <li id="cambridge">Cambridge 8</li>
+                <li id="cambridge">Cambridge 9</li>
+                <li id="cambridge">Cambridge 10</li>
+                <li id="cambridge">Cambridge 11</li>
+                <li id="cambridge">Cambridge 12</li>
+                <li id="cambridge">Cambridge 13</li>
+                <li id="cambridge">Cambridge 14</li>
+                <li id="cambridge">Cambridge 15</li>
+                <li id="cambridge">Cambridge 16</li>
+                <li id="cambridge">Cambridge 17</li>
+                <li id="cambridge">Cambridge 18</li>
+                <li id="cambridge">Cambridge 19</li>
+                <li style="opacity: .5;" id="cambridge">Cambridge 20</li>
+            </ul>
+            <button class="headerBooks_closeBTN"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="M480-545.33 287.33-352.67 240-400l240-240 240 240-47.33 47.33L480-545.33Z"/></svg></button>
+        </div>
     </header>
+
+    <!-- <div class="chooseYourBook">"Chose your book"</div> -->
     <main>
         <div class="books_cambridge">
             <div class="books_cambridge-title">
                 <p>Cambridge IELTS</p> 
             </div>
             <div class="books_cambridge-books">
-                <span style="background-color: #e4163a; " class="cam20">
+                <span style=" " class="cam20">
                     <p>20</p>
                     <button class="camTnings camT">Tests</button>
                     <button class="camTnings camR">Reading</button>
                     <button class="camTnings camL">Listening</button>
                 </span>
-                <span style="background-color: #e4163a; " class="cam19">
+                <span style=" " class="cam19">
                     <p>19</p>
                     <button class="camTnings camT">Tests</button>
                     <button class="camTnings camR">Reading</button>
                     <button class="camTnings camL">Listening</button>
                 </span>
-                <span style="background-color: #5f5a92; " class="cam18">
+                <span style=" " class="cam18">
                     <p>18</p>
                     <button class="camTnings camT">Tests</button>
                     <button class="camTnings camR">Reading</button>
                     <button class="camTnings camL">Listening</button>
                 </span>
-                <span style="background-color: #5f5a92; " class="cam17">
+                <span style=" " class="cam17">
                     <p>17</p>
                     <button class="camTnings camT">Tests</button>
                     <button class="camTnings camR">Reading</button>
                     <button class="camTnings camL">Listening</button>
                 </span>
-                <span style="background-color: #5f5a92; " class="cam16">
+                <span style=" " class="cam16">
                     <p>16</p>
                     <button class="camTnings camT">Tests</button>
                     <button class="camTnings camR">Reading</button>
                     <button class="camTnings camL">Listening</button>
                 </span>
-                <span style="background-color: #5f5a92; " class="cam15">
+                <span style=" " class="cam15">
                     <p>15</p>
                     <button class="camTnings camT">Tests</button>
                     <button class="camTnings camR">Reading</button>
                     <button class="camTnings camL">Listening</button>
                 </span>
-                <span style="background-color: #3a4f84; " class="cam14">
+                <span style=" " class="cam14">
                     <p>14</p>
                     <button class="camTnings camT">Tests</button>
                     <button class="camTnings camR">Reading</button>
                     <button class="camTnings camL">Listening</button>
                 </span>
-                <span style="background-color: #6892ce; " class="cam13">
+                <span style=" " class="cam13">
                     <p>13</p>
                     <button class="camTnings camT">Tests</button>
                     <button class="camTnings camR">Reading</button>
                     <button class="camTnings camL">Listening</button>
                 </span>
-                <span style="background-color: #6892ce; " class="cam12">
+                <span style=" " class="cam12">
                     <p>12</p>
                     <button class="camTnings camT">Tests</button>
                     <button class="camTnings camR">Reading</button>
                     <button class="camTnings camL">Listening</button>
                 </span>
-                <span style="background-color: #6892ce; " class="cam11">
+                <span style=" " class="cam11">
                     <p>11</p>
                     <button class="camTnings camT">Tests</button>
                     <button class="camTnings camR">Reading</button>
                     <button class="camTnings camL">Listening</button>
                 </span>
-                <span style="background-color: #39398c; " class="cam10">
+                <span style=" " class="cam10">
                     <p>10</p>
                     <button class="camTnings camT">Tests</button>
                     <button class="camTnings camR">Reading</button>
@@ -131,7 +158,6 @@
             </div>
         </div>
     </main>
-
     <!-- JS -->
 
     <script src="script.js"></script>

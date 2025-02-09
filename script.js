@@ -1,3 +1,51 @@
+// Header Book Selection
+
+let isSectionOpen = false
+let bookSelection_element = document.querySelector('.headerBooks')
+let bookSelectionCloseBTN_element = document.querySelector('.headerBooks_closeBTN')
+
+function HeaderBookSection() {
+
+    if (!isSectionOpen) {
+        bookSelection_element.style.height = '100%'
+        setTimeout(() => {
+            bookSelection_element.style.overflow = 'visible'
+            bookSelectionCloseBTN_element.classList.add('headerBooks_closeBTN-active')
+            setTimeout(() => {
+                bookSelectionCloseBTN_element.style.overflow = 'visible'
+            }, 100);
+        }, 300);
+        isSectionOpen = true
+    }
+}   
+
+bookSelectionCloseBTN_element.addEventListener('click' , () => {
+    if (isSectionOpen) {
+        closingFunc()
+        isSectionOpen = false
+    }
+})
+
+window.addEventListener('keydown' , (e) => {
+    if (e.key === 'Escape' && isSectionOpen) {
+        closingFunc()
+        isSectionOpen = false
+    }
+})
+
+function closingFunc() {
+    bookSelectionCloseBTN_element.style.overflow = 'hidden'
+    bookSelectionCloseBTN_element.classList.remove('headerBooks_closeBTN-active')
+    setTimeout(() => {
+        bookSelection_element.style.overflow = 'hidden'
+        setTimeout(() => {
+            bookSelection_element.style.height = 0
+        }, 100);
+    }, 200);
+}
+
+// Book Opener
+
 let booksPreviewlist = document.querySelectorAll('.books_cambridge-books span');
 let activeBook = null;
 
