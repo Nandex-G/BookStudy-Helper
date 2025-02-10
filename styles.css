@@ -5,7 +5,7 @@ body {
     background-color: #2A2A2A ;
 }
 
-/* Header */
+/* Header //////////////////////////////////////////////////// */
 
 header {
     display: flex;
@@ -130,6 +130,21 @@ header div {
     height: 0;
 }
 
+.headerBooks_title {
+    position: absolute;
+    transform: translateY(-100%);
+    top: 0;
+    background-color: #2e594c;
+    z-index: 5;
+    border-radius: 1rem 1rem 0 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: .25s ease-in-out ;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 .headerBooks ul {
     display: flex;
     list-style: none;
@@ -150,7 +165,7 @@ header div {
 
 .headerBooks ul::-webkit-scrollbar-thumb {
     cursor: all-scroll;
-    background-color: #2a534d;
+    background-color: #A7F3D0;
     border-radius: 5rem;
     border: 2px solid #224238;
 }
@@ -187,8 +202,6 @@ header div {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    /* padding: 2px; */
-
     overflow: hidden ;
     height: 0 ;
     padding: 0 ;
@@ -202,39 +215,68 @@ header div {
     fill: white !important;
 }
 
+.headerBooks_title-active {
+    padding: .8rem 2rem;
+    max-height: 46px;
+}
+
 .headerBooks_closeBTN-active {
     max-height: 1rem !important;
     padding: 1rem;
 }
 
-.prev,.next {
-    position: absolute;
-    height: 100%;
-    border: none;
-}
+/* Nav //////////////////////////////////////////////////// */
 
-.prev {
-    left: 0;
-    border-radius: 0 0 0 1rem ;
-}
-
-.next {
-    right: 0;
-    border-radius: 0 0 1rem 0 ;
-}
-
-/* Chose Your Book */
-
-.chooseYourBook {
-    font-size: 1.2rem;
+.hero {
+    background: linear-gradient(180deg, #2C4A42 0%, #000000 100%);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
-    color: #8AB17D ;
+    flex-direction: column;
 }
 
-/* Main */
+.hero .hero_preTitle {
+    position: absolute;
+    font-size: 1.2rem;
+    color: #C0C0C0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300; 
+    top: 40%;
+    transition: .5s;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero .hero_title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #F8E6A0, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.3);
+    opacity: 0;
+}
+
+.hero_title-animation {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+/* Main //////////////////////////////////////////////////// */
 
 main {
     display: flex;
