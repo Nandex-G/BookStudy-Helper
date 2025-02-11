@@ -22,7 +22,7 @@
 <body>  
     <header>
         <div class="title"> BookStudy Helper </div>
-        <div class="headerLinks">
+        <nav class="headerLinks">
             <div id="headerListening">
                 <div class="headerTitles">
                     Listening
@@ -54,8 +54,8 @@
                     <li onclick="HeaderBookSection('not-available')">Essential Words For The TOEFL</li>
                 </ul>
             </div>
-        </div>
-        <div class="headerBooks">
+        </nav>
+        <nav class="headerBooks">
             <span class="headerBooks_title">Not Available</span>
             <ul class="headerBook_selection">
                 <li id="cambridge">Cambridge 1</li>
@@ -85,7 +85,8 @@
                 <li id="camTest4 tests">Test 4</li> -->
             </ul>
             <button class="headerBooks_closeBTN"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="M480-545.33 287.33-352.67 240-400l240-240 240 240-47.33 47.33L480-545.33Z"/></svg></button>
-        </div>
+        </nav>
+
     </header>
 
     <div class="hero">
@@ -93,6 +94,32 @@
         <span class="hero_title">BookStudy Helper</span>
     </div>
 
+    <form name="contact" netlify>
+        <p>
+          <label>Name <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Email <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+
+    <section></section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
     <main>
         <div class="books_cambridge">
             <div class="books_cambridge-title">
@@ -167,7 +194,7 @@
                 </span>
             </div>
         </div>
-    </main>
+    </main> -->
     <!-- JS -->
 
     <script src="script.js"></script>
