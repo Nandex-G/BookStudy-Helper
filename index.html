@@ -22,89 +22,57 @@
 <body>  
     <header>
         <div class="title"> BookStudy Helper </div>
-        <nav class="headerLinks">
-            <div id="headerListening">
-                <div class="headerTitles">
-                    Listening
+        <nav class="navLinks">
+            <div class="navLinks-links">
+                <div class="navLinks_titles">
+                    Books
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
                 </div>
-                <ul class="headerLinksItems headerListeningItems">
-                    <li onclick="HeaderBookSection('ListeningExam')">Exams</li>
-                    <li onclick="HeaderBookSection('ListeningTranscript')">Transcripts</li>
-                    <li onclick="HeaderBookSection('ListeningWordAndPhrase')">Words And Phrases</li>
+                <ul class="navLinks_lists">
+                    <li onclick="navSelectionOpener('books' , 'cambridgeIELTS')">Cambridge IELTS</li>
+                    <li onclick="navSelectionOpener('books' , 'collins')">Collins</li>
+                    <li onclick="navSelectionOpener('books' , 'grammarInUse')">Grammar In Use</li>
                 </ul>
             </div>
-            <div id="headerReading">
-                <div class="headerTitles">
-                    Reading
+            <div class="navLinks-links">
+                <div class="navLinks_titles">
+                    Vocabulary
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
                 </div>
-                <ul class="headerLinksItems headerReadingItems">
-                    <li onclick="HeaderBookSection('ReadingExam')">Exams</li>
-                    <li onclick="HeaderBookSection('ReadingWordAndPhrase')">Words And Phrases</li>
+                <ul class="navLinks_lists">
+                    <li style="font-size: .9rem;">504 Absolutely Essential Words</li>
+                    <li style="font-size: .9rem;">Essential Words For The TOEFL</li>
                 </ul>
             </div>
-            <div id="headerWords">
-                <div class="headerTitles">
-                    Words
+            <div class="navLinks-links">
+                <div class="navLinks_titles">
+                    Cam Shortcuts
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
                 </div>
-                <ul class="headerLinksItems headerWordsItems">
-                    <li onclick="HeaderBookSection('not-available')">504</li>
-                    <li onclick="HeaderBookSection('not-available')">Essential Words For The TOEFL</li>
+                <ul class="navLinks_lists">
+                    <li>Listening</li>
+                    <li>Reading</li>
+                    <li>Words And Phrases</li>
                 </ul>
             </div>
         </nav>
-        <nav class="headerBooks">
-            <span class="headerBooks_title">Not Available</span>
-            <ul class="headerBook_selection">
-                <li id="cambridge">Cambridge 1</li>
-                <li id="cambridge">Cambridge 2</li>
-                <li id="cambridge">Cambridge 3</li>
-                <li id="cambridge">Cambridge 4</li>
-                <li id="cambridge">Cambridge 5</li>
-                <li id="cambridge">Cambridge 6</li>
-                <li id="cambridge">Cambridge 7</li>
-                <li id="cambridge">Cambridge 8</li>
-                <li id="cambridge">Cambridge 9</li>
-                <li id="cambridge">Cambridge 10</li>
-                <li id="cambridge">Cambridge 11</li>
-                <li id="cambridge">Cambridge 12</li>
-                <li id="cambridge">Cambridge 13</li>
-                <li id="cambridge">Cambridge 14</li>
-                <li id="cambridge">Cambridge 15</li>
-                <li id="cambridge">Cambridge 16</li>
-                <li id="cambridge">Cambridge 17</li>
-                <li id="cambridge">Cambridge 18</li>
-                <li id="cambridge">Cambridge 19</li>
-                <li style="opacity: .5;" id="cambridge">Cambridge 20</li>
 
-                <!-- <li id="camTest1 tests">Test 1</li>
-                <li id="camTest2 tests">Test 2</li>
-                <li id="camTest3 tests">Test 3</li>
-                <li id="camTest4 tests">Test 4</li> -->
-            </ul>
-            <button class="headerBooks_closeBTN"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="M480-545.33 287.33-352.67 240-400l240-240 240 240-47.33 47.33L480-545.33Z"/></svg></button>
-        </nav>
+        <div class="navSelection">
+            <span class="navSelection-title">Not Available</span>
+            <ul class="navSelection-body"><li>...</li></ul>
+            <button class="navSelection-BTN"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="M480-545.33 287.33-352.67 240-400l240-240 240 240-47.33 47.33L480-545.33Z"/></svg></button>
+        </div>
 
     </header>
 
     <div class="hero">
-        <span class="hero_preTitle">Study a lot easier with</span>
+        <section>
+
+        </section>
+        <span class="hero_preTitle">Make study easier with</span>
         <span class="hero_title">BookStudy Helper</span>
     </div>
 
-    <form name="contact" netlify>
-        <p>
-          <label>Name <input type="text" name="name" /></label>
-        </p>
-        <p>
-          <label>Email <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
 
     <section></section>
 

@@ -1,112 +1,102 @@
 // Header Book Selection
 
 let isSectionOpen = false
-let bookSelectionTitle_element = document.querySelector('.headerBooks_title')
-let bookSelection_element = document.querySelector('.headerBooks')
-let bookSelectionCloseBTN_element = document.querySelector('.headerBooks_closeBTN')
+let navSelectionTitle_element = document.querySelector('.navSelection-title')
+let navSelection_element = document.querySelector('.navSelection')
+let navSelection_body_element = document.querySelector('.navSelection-body')
+let navSelection_BTN_element = document.querySelector('.navSelection-BTN')
+
+
+let books = {
+    'cambridge' : ['Cambridge_10' , 'Cambridge_11' , 'Cambridge_12' , 'Cambridge_13' , 'Cambridge_14' , 'Cambridge_15' , 'Cambridge_16' , 'Cambridge_17' , 'Cambridge_18' , 'Cambridge_19' , 'Cambridge_20'],
+    'collins' : ['Lesson_1','Lesson_2','Lesson_3','Lesson_4','Lesson_5',]
+}
 
 
 
-function HeaderBookSection(topic) {
-    let bookSelection_element_children = bookSelection_element.querySelectorAll('li')
-    switch (topic) {
 
-        // Listening
+function navSelectionOpener(category , topic) {
+    let navSelection_element_children = navSelection_element.querySelectorAll('li')
+    if (category == 'books') {
+        switch (topic) {
 
-        case 'ListeningExam': 
-            bookSelectionTitle_element.textContent = 'Listening Exams'
-            bookSelection_element_children.forEach(book => {
-                book.dataset.topic = topic
-            })
-        break;
+            case 'cambridgeIELTS': 
+                navSelectionTitle_element.textContent = 'Cambridge IELTS'
+                bookMaker('cambridge')
+            break;
+    
+            case 'collins':
+                navSelectionTitle_element.textContent = 'Collins'
+                bookMaker('collins')
+            break;
 
-        case 'ListeningTranscript':
-            bookSelectionTitle_element.textContent = 'Listening Transcript'
-            bookSelection_element_children.forEach(book => {
-                book.dataset.topic = topic
-            })
-        break;
+            case 'grammarInUse' :
+                navSelectionTitle_element.textContent = 'Grammar In Use'
+                bookMaker('grammarInUse')
+            break;
 
-        case 'ListeningWordAndPhrase':
-            bookSelectionTitle_element.textContent = 'Listening Words and Phrases'
-            bookSelection_element_children.forEach(book => {
-                book.dataset.topic = topic
-            })
-        break;
-
-        // Reading
-
-        case 'ReadingExam':
-            bookSelectionTitle_element.textContent = 'Reading Exams'
-            bookSelection_element_children.forEach(book => {
-                book.dataset.topic = topic
-            })
-        break;
-
-        case 'ReadingWordAndPhrase':
-            bookSelectionTitle_element.textContent = 'Reading Words and Phrases'
-            bookSelection_element_children.forEach(book => {
-                book.dataset.topic = topic
-            })
-        break;
-
-        // Word Books
-
-        case 'book504':
-            bookSelectionTitle_element.textContent = '504'
-        break;
-            
-        case 'bookTOFEL':
-            bookSelectionTitle_element.textContent = 'Essential Words For The TOEFL'
-        break;
-            
-
-        default:
-            bookSelectionTitle_element.textContent = "Not Availible (just yet)"
-        break;
+            default:
+                navSelectionTitle_element.textContent = "Still not available"
+            break;
+        }
+    } else if (category == 'vocabulary') {
+        
+    } else if (condition== 'camShortcuts') {
+        
     }
-    bookSelection_element_children.forEach(book => {
-        book.addEventListener('click' , () => {
 
-        })
-    })
+
 
     if (!isSectionOpen) {
-        bookSelection_element.style.height = '100%'
+        navSelection_element.style.height = '100%'
         setTimeout(() => {
-            bookSelectionTitle_element.classList.add('headerBooks_title-active')
-            bookSelection_element.style.overflow = 'visible'
-            bookSelectionCloseBTN_element.classList.add('headerBooks_closeBTN-active')
+            navSelectionTitle_element.classList.add('navLinks_titles-active')
+            navSelection_element.style.overflow = 'visible'
+            navSelection_BTN_element.classList.add('navSelection-BTN-active')
             setTimeout(() => {
-                bookSelectionCloseBTN_element.style.overflow = 'visible'
+                navSelection_BTN_element.style.overflow = 'visible'
             }, 100);
         }, 300);
         isSectionOpen = true
     }
+
+    function bookMaker(book) {
+        navSelection_body_element.style.opacity = 0
+        setTimeout(() => {
+            navSelection_body_element.innerHTML = ''
+            if (book in books) {
+                books[book].forEach((book) => {
+                    navSelection_body_element.innerHTML += `<li id="${book}">${book.replace('_' , ' ')}</li>`
+                    navSelection_body_element.style.opacity = 1
+                })
+            } else {
+                navSelection_body_element.innerHTML = '<li>This book is still not available.</li>'      
+                navSelection_body_element.style.opacity = 1      
+            }
+        }, 200);
+    }
 }   
 
-bookSelectionCloseBTN_element.addEventListener('click' , () => {
+navSelection_BTN_element.addEventListener('click' , () => {
     if (isSectionOpen) {
         closingFunc()
         isSectionOpen = false
     }
 })
-
 window.addEventListener('keydown' , (e) => {
     if (e.key === 'Escape' && isSectionOpen) {
         closingFunc()
         isSectionOpen = false
     }
 })
-
 function closingFunc() {
-    bookSelectionTitle_element.classList.remove('headerBooks_title-active')
-    bookSelectionCloseBTN_element.style.overflow = 'hidden'
-    bookSelectionCloseBTN_element.classList.remove('headerBooks_closeBTN-active')
+    navSelectionTitle_element.classList.remove('navLinks_titles-active')
+    navSelection_BTN_element.style.overflow = 'hidden'
+    navSelection_BTN_element.classList.remove('navSelection-BTN-active')
     setTimeout(() => {
-        bookSelection_element.style.overflow = 'hidden'
+        navSelection_element.style.overflow = 'hidden'
         setTimeout(() => {
-            bookSelection_element.style.height = 0
+            navSelection_element.style.height = 0
         }, 100);
     }, 200);
 } 
