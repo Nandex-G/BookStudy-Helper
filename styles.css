@@ -94,21 +94,28 @@ header nav {
     background-color: #224035;
     width: 100%;
     padding: .8rem 0;
-    margin: .2rem 0;
+    margin: .5rem 0;
     font-weight: 600;
     letter-spacing: 1px;
     color: #eeece8;
     cursor: pointer;
     text-align: center;
     border-radius: 1rem;
-    transition: .2s;
-    box-shadow: 0 3px 0 #1d362d;
+    transition: .3s;
+    box-shadow: 0 5px 0 #1d362d;
 }
 
 .navLinks_lists li:hover {
-    color: #b7afa5;
+    color: #d9d9d9;
     background-color: #224035e4;
+    box-shadow: 0 4px 0 #12211b;
+    transform: translateY(1px);
+}
+
+.navLinks_lists li:active {
     box-shadow: 0 1px 0 #1d362d;
+    transform: translateY(4px);
+    transition: .1s;
 }
 
 .navLinks-links:hover > .navLinks_lists {
@@ -128,7 +135,6 @@ header nav {
 
 .navSelection {
     position: absolute;
-    background-color: #356859;
     width: 50%;
     padding: 0;
     left: 50%;
@@ -143,13 +149,14 @@ header nav {
     align-items: center;
     overflow: hidden;
     height: 0;
+    background-color: #2A4E59;
+    box-shadow: 0 3px 2px black;
 }
 
 .navSelection-title {
     position: absolute;
     transform: translateY(-100%);
     top: 0;
-    background-color: #2e594c;
     z-index: 5;
     border-radius: 1rem 1rem 0 0;
     max-height: 0;
@@ -158,6 +165,8 @@ header nav {
     padding: 0 2rem;
     font-size: 1.2rem;
     font-weight: 600;
+    background-color: #305a6a;
+    color: #ebebeb;
 }
 
 .navSelection ul {
@@ -167,7 +176,7 @@ header nav {
     font-size: 1.2rem;
     padding: 0;
     overflow-x: auto;
-    padding: .5rem 0;
+    padding: .67rem 0;
     scroll-behavior: smooth;
     margin: 0 .5rem;
 }
@@ -180,29 +189,41 @@ header nav {
 
 .navSelection ul::-webkit-scrollbar-thumb {
     cursor: all-scroll;
-    background-color: #A7F3D0;
+    background-color: rgb(80, 156, 182);
     border-radius: 5rem;
     border: 2px solid #224238;
 }
 
 .navSelection ul li {
     transition: .2s;
-    padding: 1rem 2rem;
     margin: 0 10px;
     border-radius: 1rem;
     cursor: pointer;
     text-wrap: nowrap;
-    background-color:#224135;
-    box-shadow: 0 5px 0 #000000 ;
+    box-shadow: 0 5px 0 #17303b;
+    background-color: #1E3C49;
+    transition: .3s;
+    padding: .8rem 1.5rem;
+    color: #DDDDDD;
+}
+
+.navSelection ul li a {
+    color: #DDDDDD;
+    font-family: 'Libre Baskerville';
+    text-decoration: none;
+    display: block;
 }
 
 .navSelection ul li:hover {
-    background-color:#224135;
+    transform: translateY(1px);
+    box-shadow: 0 4px 0 #102027 ;
+    background-color: #1e3c4980;
 }
 
 .navSelection ul li:active {
     box-shadow: 0 1px 0 #000000 ;
-    transform: translateY(5px);
+    transform: translateY(4px);
+    transition: .1s;
 }
 
 .navSelection-body {
@@ -210,8 +231,23 @@ header nav {
     opacity: 0;
 }
 
+.navSelection-backArrow {
+    background-color: rgb(210, 47, 18);
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    padding: .1rem .3rem;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.navSelection-backArrow:hover {
+    background-color: rgb(143, 33, 14);
+}
+
 .navSelection-BTN {
-    background-color: #2e594c;
     width: 50%;
     border-radius: 0 0 1rem 1rem;
     border: none;
@@ -225,10 +261,15 @@ header nav {
     overflow: hidden ;
     height: 0 ;
     padding: 0 ;
+    background-color: #335F70;
+    color: #DDDDDD;
+    box-shadow: 0 3px 1px black;
 }
 
 .navSelection-BTN:hover {
-    background-color: #2a5145;
+    background-color: #305a6b;
+    color: #FFFFFF;
+    box-shadow: 0 2px 2px black;
 }
 
 .navSelection-BTN svg {

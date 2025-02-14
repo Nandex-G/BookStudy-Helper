@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambridge Listening</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="css/book.css">
+    <!-- Site Icon -->
+    <link rel="shortcut icon" href="../images/icons8-literature-96.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="title"> BookStudy Helper </div>
+        <nav class="navLinks">
+            <div class="navLinks-links">
+                <div class="navLinks_titles">
+                    Books
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+                </div>
+                <ul class="navLinks_lists">
+                    <li onclick="navSelectionOpener('books' , 'cambridgeIELTS')">Cambridge IELTS</li>
+                    <li onclick="navSelectionOpener('books' , 'collins')">Collins</li>
+                    <li onclick="navSelectionOpener('books' , 'grammarInUse')">Grammar In Use</li>
+                </ul>
+            </div>
+            <div class="navLinks-links">
+                <div class="navLinks_titles">
+                    Vocabulary
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+                </div>
+                <ul class="navLinks_lists">
+                    <li onclick="navSelectionOpener('vocabulary' , '504')" style="font-size: .9rem;">504 Absolutely Essential Words</li>
+                    <li onclick="navSelectionOpener('vocabulary' , 'E_TOFEL')" style="font-size: .9rem;">Essential Words For The TOEFL</li>
+                </ul>
+            </div>
+            <div class="navLinks-links">
+                <div class="navLinks_titles">
+                    Cam Shortcuts
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+                </div>
+                <ul class="navLinks_lists">
+                    <li>Listening</li>
+                    <li>Reading</li>
+                    <li>Words And Phrases</li>
+                </ul>
+            </div>
+        </nav>
+    
+        <div class="navSelection">
+            <span class="navSelection-title">Not Available</span>
+            <span class="navSelection-backArrow">◀</span>
+            <ul id="Listening" class="navSelection-body"><li>...</li></ul>
+            <button class="navSelection-BTN"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="M480-545.33 287.33-352.67 240-400l240-240 240 240-47.33 47.33L480-545.33Z"/></svg></button>
+        </div>
+    
+    </header>
+
+
+    
+    <main>
+        <div class="bookSection">
+            <div class="bookSection_title">
+                <p>IELTS Listening Tests</p> 
+            </div>
+            <div class="bookSection_body">
+                <span style="grid-column-start: 1; grid-column-end: 2;">
+                    <p>20</p>
+                    <button>Test 1</button>
+                    <button>Test 2</button>
+                    <button>Test 3</button>
+                    <button>Test 4</button>
+                </span>
+                <span style="grid-column-start: 2; grid-column-end: 3;">
+                    <p>19</p>
+                    <button>Test 1</button>
+                    <button>Test 2</button>
+                    <button>Test 3</button>
+                    <button>Test 4</button>
+                </span>
+                <span style="grid-column-start: 3; grid-column-end: 4;">
+                    <p>18</p>
+                    <button>Test 1</button>
+                    <button>Test 2</button>
+                    <button>Test 3</button>
+                    <button>Test 4</button>
+                </span>
+                <span style="grid-column-start: 4; grid-column-end: 5;">
+                    <p>17</p>
+                    <button>Test 1</button>
+                    <button>Test 2</button>
+                    <button>Test 3</button>
+                    <button>Test 4</button>
+                </span>
+                <span style="grid-column-start: 5; grid-column-end: 6;">
+                    <p>16</p>
+                    <button>Test 1</button>
+                    <button>Test 2</button>
+                    <button>Test 3</button>
+                    <button>Test 4</button>
+                </span>
+                <span style="grid-column-start: 6; grid-column-end: 7;">
+                    <p>15</p>
+                    <button>Test 1</button>
+                    <button>Test 2</button>
+                    <button>Test 3</button>
+                    <button>Test 4</button>
+                </span>
+                <span style="grid-column-start: 7; grid-column-end: 8;">
+                    <p>14</p>
+                    <button>Test 1</button>
+                    <button>Test 2</button>
+                    <button>Test 3</button>
+                    <button>Test 4</button>
+                </span>
+                <span style="grid-column-start: 8; grid-column-end: 9;">
+                    <p>13</p>
+                    <button>Test 1</button>
+                    <button>Test 2</button>
+                    <button>Test 3</button>
+                    <button>Test 4</button>
+                </span>
+                <span style="grid-column-start: 9; grid-column-end: 10;">
+                    <p>12</p>
+                    <button>Test 1</button>
+                    <button>Test 2</button>
+                    <button>Test 3</button>
+                    <button>Test 4</button>
+                </span>
+                <span style="grid-column-start: 10; grid-column-end: 11;">
+                    <p>11</p>
+                    <button>Test 1</button>
+                    <button>Test 2</button>
+                    <button>Test 3</button>
+                    <button>Test 4</button>
+                </span>
+                <span style="grid-column-start: 11; grid-column-end: 12;">
+                    <p>10</p>
+                    <button>Test 1</button>
+                    <button>Test 2</button>
+                    <button>Test 3</button>
+                    <button>Test 4</button>
+                </span>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/book.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
+

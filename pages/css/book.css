@@ -1,0 +1,84 @@
+
+
+.bookSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    transition: all 0.4s;
+}
+
+.bookSection_title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f2a9a9;
+    transition: all 0.4s;
+}
+
+.bookSection_body {
+    display: grid;
+    grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+    transition: all 0.4s;
+}
+
+.bookSection_body span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: gray;
+    height: 48vh;
+    border-radius: 1rem;
+    transition: all 0.4s;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Lato';
+    transition: all 0.4s;
+}
+
+.bookSection_body span:hover {
+    scale: 1.1;
+    transition: all 0.4s;
+}
+
+.bookSection span p {
+    font-size: 1.8rem;
+    transition: all 0.4s;
+    position: absolute;
+}
+
+.bookSection_body button {
+    margin: .5rem .5rem;
+    background-color: green;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: all 0.4s;
+    scale: .0000001;
+}
+
+
+/* Activations */
+
+.bookActiveWidth {
+    z-index: 500;
+    scale: 1.2 !important;
+    transition: all 0.4s;
+}
+
+.bookActiveButtons {
+    opacity: 1 !important ;
+    scale: 1 !important;
+    transition: all 0.4s;
+}
+
+.bookActiveP {  
+    top: 1%;
+    transition: all 0.4s;
+}
