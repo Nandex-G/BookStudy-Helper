@@ -1,84 +1,109 @@
-
+body {
+    background-color: #222831;
+}
 
 .bookSection {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 3rem;
-    transition: all 0.4s;
+    padding: 1rem;
 }
 
 .bookSection_title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #f2a9a9;
-    transition: all 0.4s;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+  
+.bookSection_title h1 {
+  color: #E9C46A;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+  
+.bookSection_title p {
+  color: #B7B7B7;
+  font-size: 1rem;
 }
 
 .bookSection_body {
     display: grid;
-    grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
-    gap: 1rem;
-    text-align: center;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    width: 90%;
+    gap: 2rem;
     margin-top: 3rem;
-    transition: all 0.4s;
 }
 
-.bookSection_body span {
+.bookSection_body div {
+    background-color: #3A4750;
+    height: 25rem;
+    border-radius: 1rem;
+    transition: all 0.4s;
+    font-family: 'Lato';
+    transition: all 0.4s;
+    margin-bottom: 1rem;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: gray;
-    height: 48vh;
-    border-radius: 1rem;
-    transition: all 0.4s;
-    margin: 0 auto;
-    position: relative;
-    font-family: 'Lato';
-    transition: all 0.4s;
+    box-shadow: 0 0 3px black;
 }
 
-.bookSection_body span:hover {
+.bookSection_body div:hover {
     scale: 1.1;
     transition: all 0.4s;
+    box-shadow: 0 0 5px #67ebdb;
 }
 
-.bookSection span p {
+.bookSection div:has(.bookSection_book) p {
     font-size: 1.8rem;
-    transition: all 0.4s;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    transition: all 0.4s;
+    background-color: inherit;
+    padding: .5rem 1rem;
+    border-radius: .7rem .7rem 0 0;
+    color: #F8B400;
 }
 
-.bookSection_body button {
+.bookSection_body div button {
     margin: .5rem .5rem;
-    background-color: green;
+    background-color: #2A9D8F;
+    color: #F1F1F1;
     border: none;
-    padding: 1rem 2rem;
+    padding: 1rem 1.3rem;
     border-radius: 1rem;
     font-size: 1.2rem;
     opacity: 0;
     transition: all 0.4s;
     scale: .0000001;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
+.bookSection_body div button:hover {
+    background-color: #319089;
+}
 
-/* Activations */
+/* Activation Classes;  */
 
 .bookActiveWidth {
     z-index: 500;
     scale: 1.2 !important;
-    transition: all 0.4s;
+    box-shadow: 0 0 3px black !important;
 }
 
 .bookActiveButtons {
     opacity: 1 !important ;
     scale: 1 !important;
-    transition: all 0.4s;
 }
 
 .bookActiveP {  
-    top: 1%;
-    transition: all 0.4s;
+    top: 0% !important;
+    transform: translateY(-100%) !important;
+    font-size: 1.4rem !important;
+    box-shadow: 0 -1px 1px black;
 }

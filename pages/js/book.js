@@ -1,11 +1,10 @@
-// Book Pages =======================================================
-
-let bookslist = document.querySelectorAll('.bookSection_body span');
+const booksList = document.querySelectorAll('.bookSection_book');
 let activeBook = null;
 
-bookslist.forEach(book => {
+booksList.forEach(book => {
     book.addEventListener('click', (event) => {
         event.stopPropagation();
+
         let buttons = book.querySelectorAll('button');
         let paragraph = book.querySelector('p');
 

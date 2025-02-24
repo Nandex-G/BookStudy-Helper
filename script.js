@@ -1,3 +1,52 @@
+// Header Maker
+
+let header = document.querySelector('header')
+
+header.innerHTML = `
+        <a href="../index.html" class="title"> BookStudy Helper </a>
+        <nav class="navLinks">
+            <div class="navLinks-links">
+                <div class="navLinks_titles">
+                    Books
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+                </div>
+                <ul class="navLinks_lists">
+                    <li onclick="navSelectionOpener('books' , 'cambridgeIELTS')">Cambridge IELTS</li>
+                    <li onclick="navSelectionOpener('books' , 'collins')">Collins</li>
+                    <li onclick="navSelectionOpener('books' , 'grammarInUse')">Grammar In Use</li>
+                </ul>
+            </div>
+            <div class="navLinks-links">
+                <div class="navLinks_titles">
+                    Vocabulary
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+                </div>
+                <ul class="navLinks_lists">
+                    <li onclick="navSelectionOpener('vocabulary' , '504')" style="font-size: .9rem;">504 Absolutely Essential Words</li>
+                    <li onclick="navSelectionOpener('vocabulary' , 'E_TOFEL')" style="font-size: .9rem;">Essential Words For The TOEFL</li>
+                </ul>
+            </div>
+            <div class="navLinks-links">
+                <div class="navLinks_titles">
+                    Cam Shortcuts
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+                </div>
+                <ul class="navLinks_lists">
+                    <li>Listening</li>
+                    <li>Reading</li>
+                    <li>Words And Phrases</li>
+                </ul>
+            </div>
+        </nav>
+    
+        <div class="navSelection">
+            <span class="navSelection-title">Not Available</span>
+            <span class="navSelection-backArrow">◀</span>
+            <ul id="Listening" class="navSelection-body"><li>...</li></ul>
+            <button class="navSelection-BTN"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="M480-545.33 287.33-352.67 240-400l240-240 240 240-47.33 47.33L480-545.33Z"/></svg></button>
+        </div>
+`
+
 // Header Book Selection
 
 let isSectionOpen = false
@@ -116,14 +165,14 @@ function navSelectionOpener(category , topic) {
             navSelection_body_element.innerHTML = ''
             if (book in books) {
                 books[book].forEach((bookItem) => {
-                    if (navSelection_body_element.id != bookItem) {
-                        if (navSelection_body_element.id == 'none') {
+                    if (header.id != bookItem) {
+                        if (header.id == 'none') {
                             navSelection_body_element.innerHTML += `<li id="${bookItem}"><a href="pages/${bookItem}.html">${bookItem.replaceAll("_", " ")}<a></li>`
                         } else {
                             navSelection_body_element.innerHTML += `<li id="${bookItem}"><a href="${bookItem}.html">${bookItem.replaceAll("_", " ")}<a></li>`
                         }
                     } else {
-                        navSelection_body_element.innerHTML += `<li style="opacity : .5;" id="${bookItem}">${bookItem.replaceAll("_", " ")}</li>`
+                        navSelection_body_element.innerHTML += `<li style="opacity : .5;" id="${bookItem}"><a>${bookItem.replaceAll("_", " ")}<a></li>`
                     }
                     navSelection_body_element.style.opacity = 1
                     if (isSubBooks == true) {

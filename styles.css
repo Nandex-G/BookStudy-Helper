@@ -26,6 +26,7 @@ header {
     font-family: "Cinzel", serif;
     font-weight: bold;
     margin-right: 3rem;
+    text-decoration: none;
 }
 
 header nav {
@@ -203,7 +204,7 @@ header nav {
     box-shadow: 0 5px 0 #17303b;
     background-color: #1E3C49;
     transition: .3s;
-    padding: .8rem 1.5rem;
+    /* padding: .8rem 1.5rem; */
     color: #DDDDDD;
 }
 
@@ -212,6 +213,10 @@ header nav {
     font-family: 'Libre Baskerville';
     text-decoration: none;
     display: block;
+}
+
+.navSelection ul li a:first-child {
+    padding: .8rem 1.5rem;
 }
 
 .navSelection ul li:hover {
@@ -348,108 +353,4 @@ header nav {
       opacity: 1;
       transform: translateY(0);
     }
-} */
-
-/* Main //////////////////////////////////////////////////// */
-
-/* main {
-    display: flex;
-    align-items: center;
-    height: 80%;
-    user-select: none;
-    padding: -1rem 0;
-} */
-
-/* Books Section */
-
-/* .books_cambridge {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0 3rem;
-}
-
-.books_cambridge-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #2A9D8F ;
-}
-
-.books_cambridge-books {
-    margin: 1rem 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.books_cambridge-books span {
-    color:#8AB17D;
-    background-color: #4A4A4A;
-    height: 368px;
-    width: 90px;
-    margin: 0 1rem;
-    border-radius: .5rem;
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    transition: scale .5s ,width .5s;
-    padding: 3rem 0;
-    box-shadow: 0 0 5px #000000;
-}
-
-.books_cambridge-books span:hover {
-    scale: 1.11;
-    width: 100px;
-}
-
-.books_cambridge-books p {
-    margin-top: 11.1875rem;
-    transition: .5s;
-}
-
-.camT{
-    margin-top: 3rem  !important;
-}
-
-.books_cambridge-books span button {
-    background-color: #3A5A40 ;
-    color: #ffffff ;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: inherit;
-    height: 15%;
-    margin: 0 1rem;
-    margin-top: 1rem;
-    transition: .3s;
-    border: none;
-    box-shadow: 0 0 5px #283f2c ;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.books_cambridge-books span button:hover {
-    background-color: #263b2a ;
-} */
-
-/* Activation Classes For Books */
-
-/* .bookActiveButtons {
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-.bookActiveP {
-    margin-top: 1.5rem !important;
-    transition: margin-top 0.5s !important;
-}
-
-.bookActiveWidth {
-    width: 200px !important;
-    scale: 1.11 !important;
 } */

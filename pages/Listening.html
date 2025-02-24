@@ -16,55 +16,11 @@
     <link rel="shortcut icon" href="../images/icons8-literature-96.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <div class="title"> BookStudy Helper </div>
-        <nav class="navLinks">
-            <div class="navLinks-links">
-                <div class="navLinks_titles">
-                    Books
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
-                </div>
-                <ul class="navLinks_lists">
-                    <li onclick="navSelectionOpener('books' , 'cambridgeIELTS')">Cambridge IELTS</li>
-                    <li onclick="navSelectionOpener('books' , 'collins')">Collins</li>
-                    <li onclick="navSelectionOpener('books' , 'grammarInUse')">Grammar In Use</li>
-                </ul>
-            </div>
-            <div class="navLinks-links">
-                <div class="navLinks_titles">
-                    Vocabulary
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
-                </div>
-                <ul class="navLinks_lists">
-                    <li onclick="navSelectionOpener('vocabulary' , '504')" style="font-size: .9rem;">504 Absolutely Essential Words</li>
-                    <li onclick="navSelectionOpener('vocabulary' , 'E_TOFEL')" style="font-size: .9rem;">Essential Words For The TOEFL</li>
-                </ul>
-            </div>
-            <div class="navLinks-links">
-                <div class="navLinks_titles">
-                    Cam Shortcuts
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#959699"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
-                </div>
-                <ul class="navLinks_lists">
-                    <li>Listening</li>
-                    <li>Reading</li>
-                    <li>Words And Phrases</li>
-                </ul>
-            </div>
-        </nav>
-    
-        <div class="navSelection">
-            <span class="navSelection-title">Not Available</span>
-            <span class="navSelection-backArrow">◀</span>
-            <ul id="Listening" class="navSelection-body"><li>...</li></ul>
-            <button class="navSelection-BTN"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="M480-545.33 287.33-352.67 240-400l240-240 240 240-47.33 47.33L480-545.33Z"/></svg></button>
-        </div>
-    
-    </header>
+    <header id="Listening"></header>
 
 
     
-    <main>
+    <!-- <main>
         <div class="bookSection">
             <div class="bookSection_title">
                 <p>IELTS Listening Tests</p> 
@@ -149,7 +105,108 @@
                 </span>
             </div>
         </div>
+    </main> -->
+    
+    
+    <main>
+      <div class="bookSection">
+          <div class="bookSection_title">
+          <h1>IELTS Listening Tests</h1>
+          <p>Choose a test and start practicing your listening skills!</p>
+      </div>
+      <div class="bookSection_body">
+  
+          <div style="border: 3px solid white; opacity: .5;" class="bookSection_book">
+            <p>20</p>
+            <button>Test 1</button>
+            <button>Test 2</button>
+            <button>Test 3</button>
+            <button>Test 4</button>
+          </div>
+  
+          <div style="border: 3px solid #e4163a;" class="bookSection_book">
+            <p>19</p>
+            <button>Test 1</button>
+            <button>Test 2</button>
+            <button>Test 3</button>
+            <button>Test 4</button>
+          </div>
+  
+          <div style="border: 3px solid #5f5a92;" class="bookSection_book">
+            <p>18</p>
+            <button>Test 1</button>
+            <button>Test 2</button>
+            <button>Test 3</button>
+            <button>Test 4</button>
+          </div>
+  
+          <div style="border: 3px solid #5f5a92;" class="bookSection_book">
+            <p>17</p>
+            <button>Test 1</button>
+            <button>Test 2</button>
+            <button>Test 3</button>
+            <button>Test 4</button>
+          </div>
+  
+          <div style="border: 3px solid #5f5a92;" class="bookSection_book">
+            <p>16</p>
+            <button>Test 1</button>
+            <button>Test 2</button>
+            <button>Test 3</button>
+            <button>Test 4</button>
+          </div>
+  
+          <div style="border: 3px solid #5f5996;" class="bookSection_book">
+            <p>15</p>
+            <button>Test 1</button>
+            <button>Test 2</button>
+            <button>Test 3</button>
+            <button>Test 4</button>
+          </div>
+  
+          <div style="border: 3px solid #5f5996;" class="bookSection_book">
+            <p>14</p>
+            <button>Test 1</button>
+            <button>Test 2</button>
+            <button>Test 3</button>
+            <button>Test 4</button>
+          </div>
+  
+          <div style="border: 3px solid #475ea2;" class="bookSection_book">
+            <p>13</p>
+            <button>Test 1</button>
+            <button>Test 2</button>
+            <button>Test 3</button>
+            <button>Test 4</button>
+          </div>
+  
+          <div style="border: 3px solid #475ea2;" class="bookSection_book">
+            <p>12</p>
+            <button>Test 1</button>
+            <button>Test 2</button>
+            <button>Test 3</button>
+            <button>Test 4</button>
+          </div>
+  
+          <div style="border: 3px solid #475ea2;" class="bookSection_book">
+            <p>11</p>
+            <button>Test 1</button>
+            <button>Test 2</button>
+            <button>Test 3</button>
+            <button>Test 4</button>
+          </div>
+  
+          <div style="border: 3px solid #475ea2;" class="bookSection_book">
+            <p>10</p>
+            <button>Test 1</button>
+            <button>Test 2</button>
+            <button>Test 3</button>
+            <button>Test 4</button>
+          </div>
+  
+      </div>  
     </main>
+  
 
     <script src="js/book.js"></script>
     <script src="../script.js"></script>
